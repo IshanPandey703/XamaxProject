@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DBURL)
 
-console.log('working', process.env.DBURL)
+
 const Schema = mongoose.Schema;
 
 const pkmnSchema = new Schema({
@@ -72,6 +72,5 @@ const pkmnSchema = new Schema({
 
 
 const Pokemon = mongoose.model('Pokemon', pkmnSchema);
-const data = require('./test/pokedex.json');
 
 module.exports = Pokemon
